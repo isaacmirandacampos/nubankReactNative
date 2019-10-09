@@ -1,17 +1,6 @@
-import { StyleSheet } from 'react-native';
-import { getStatusBarHeight } from 'react-native-iphone-x-helper';
+import styled from 'styled-components/native';
 
-export const Styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#8B10AE",
-    paddingTop: getStatusBarHeight(),
-    justifyContent: "center",
-  },
-  content: {
-    flex: 1,
-    maxHeight: 400,
-    zIndex: 5,
-  },
-
-});
+export const Container = styled.View`
+  flex: 1;
+  background: #8B10AE;
+`;
