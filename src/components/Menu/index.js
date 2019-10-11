@@ -2,10 +2,15 @@ import React from 'react';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import { Container, QRCode, Code, Nav, NavItem, NavText, SignOutButton, SignOutButtonText } from './styles'
 
-export default function Menu() {
+export default function Menu({ translateY }) {
   var qrcode = "/mnt/sda1/www/nubankReactNative/src/assets/QRCode.png"
   return (
-    <Container>
+    <Container style={{
+      opacity: translateY.interpolate({
+        inputRange: [0, 250],
+        outputRange: [0, 1],
+      })
+    }}>
       <Code>
         <QRCode source={require(qrcode)} />
       </Code>
